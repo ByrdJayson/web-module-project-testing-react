@@ -4,7 +4,19 @@ import { render, screen } from '@testing-library/react';
 import Episode from './../Episode';
 
 
-test("renders without error", () => {});
+const ep = {
+    id: 5,
+    image: '/local',
+    name: '',
+    season: 1,
+    number: 1,
+    summary: 'LOREM IPSUM',
+    runtime: 45
+}
+
+test("renders without error", () => {
+    render(<Episode episode={ep}/>);
+});
 
 test("renders the summary test passed as prop", ()=>{});
 
