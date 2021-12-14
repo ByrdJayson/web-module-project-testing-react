@@ -5,7 +5,26 @@ import userEvent from '@testing-library/user-event';
 
 import Show from './../Show';
 
-test('renders without errors', ()=>{});
+const show = {
+    name: 'Some Show',
+    summary: 'Things Happen',
+    seasons: [
+        {
+            id: 1,
+            name: 'Season 1',
+            episodes: []
+        },
+        {
+            id: 2,
+            name: 'Season 2',
+            episodes: []
+        }
+    ]
+}
+
+test('renders without errors', ()=>{
+    render(<Show show={show} selectedSeason={'none'}/>);
+});
 
 test('renders Loading component when prop show is null', () => {});
 
